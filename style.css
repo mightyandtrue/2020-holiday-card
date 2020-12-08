@@ -1,3 +1,25 @@
+
+
+
+@font-face {
+  font-family: "FilsonProRegular";
+  src: url('FilsonPro-Regular.woff')
+}
+
+
+@font-face {
+  font-family: "FilsonProHeavy";
+  src: url('FilsonPro-Heavy.eot') format('embedded-opentype'), /* IE6-IE8 */
+      url('FilsonPro-Heavy.woff') format('woff'), /* Modern Browsers */
+      url('FilsonPro-Heavy.tff')  format('truetype'), /* Safari, Android, iOS */
+
+}
+
+src: url('webfont.eot'); /* IE9 Compat Modes */
+  src: url('webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('webfont.woff') format('woff'), /* Modern Browsers */
+       url('webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+
 body {
   margin: 0;
   height: 100vh;
@@ -215,7 +237,7 @@ img {
   border-radius: 4px;
   cursor: pointer;
   /* white-space: nowrap; */
-
+  z-index:1001;
   text-align: center;
   min-height: 100px;
 
@@ -226,14 +248,16 @@ img {
   display: none;
   color:white;
   white-space: wrap;
+  font-size:75%;
+  font-family: FilsonProRegular;
+}
+#avatar-buttons  .button:hover p{
+      display: block;
 }
 
-
-.button:hover .button p{
-    display: block;
-
+#action-buttons .button:hover p{
+      display: block;
 }
-
 
 .background-video {
   display: none;
