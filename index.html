@@ -1,178 +1,279 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="https://assets.website-files.com/5eed52b425f297632ad91475/5f04930fd5fee73b6af73537_mighty-true-favicon.png" />
-  <title>M&T Holiday Card</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="https://assets.website-files.com/5eed52b425f297632ad91475/5f04930fd5fee73b6af73537_mighty-true-favicon.png" />
+<title>M&T Holiday Card</title>
 
+<link rel="stylesheet" href="style.css">
 
-  <link rel="stylesheet" href="style.css">
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</head>
 
-  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-
-</body>
-</html>
+<body>
 
   <div id="scene">
 
+    <!-- SNOW VIDEO -->
+    <video class="background-video" id="snow" displaysinline autoplay muted loop>
+      <source src="https://storage.googleapis.com/mightyandtrue-website/snow_loop.mp4" type="video/mp4"></source>
+    </video>
+
+    <!-- ROCKET SHIP VIDEO -->
+    <video class="background-video" id="rocket-ship" displaysinline autoplay muted>
+      <source src="https://storage.googleapis.com/mightyandtrue-website/01_rocket_launch_4mb.mp4" type="video/mp4"></source>
+    </video>
+
+    <!-- KARATE CHOP VIDEO -->
+    <video class="background-video" id="karate-chop" displaysinline autoplay muted>
+      <source src="https://storage.googleapis.com/mightyandtrue-website/01_rocket_launch_4mb.mp4" type="video/mp4"></source>
+    </video>
+
+    <!-- YETI VIDEO -->
+    <video class="background-video" id="yeti" displaysinline autoplay muted>
+      <source src="https://storage.googleapis.com/mightyandtrue-website/03_yeti_4mb.mp4" type="video/mp4"></source>
+    </video>
+
+    <!-- SLING SHOT VIDEO -->
+    <video class="background-video" id="sling-shot" displaysinline autoplay muted>
+      <source src="https://storage.googleapis.com/mightyandtrue-website/02_slingshot_4mb.mp4" type="video/mp4"></source>
+    </video>
+
+    
+
+
+
     <div id="center-content">
-      <img src="./images/header.png" ></img>
+      <img src="./images/header.png" />
       <br />
       <br />
 
-      <div id="goodbye-choices">
-        <div class="goodbye-button" data-goodbye-action="tiger"><img class="iconTransport" src="./images/icon_hornet.png" alt="Murder_Hornet"></div>
-        <div class="goodbye-button" data-goodbye-action="karate-chop"><img class="iconTransport" src="./images/icon_zoom.png" alt="Zoom"></div>
-        <div class="goodbye-button" data-goodbye-action="rocket-ship"><img class="iconTransport" src="./images/icon_tp.png" alt="toilet_paper"></div>
-        <div class="goodbye-button" data-goodbye-action="fireworks"><img class="iconTransport" src="./images/icon_tiger_king.png" alt="tiger_king"></div>
+      <!-- AVATAR BUTTONS -->
+      <div id="avatar-buttons" class="buttons-wrapper">
+        <div class="button" data-avatar="murder-hornet"><img class="iconTransport" src="./images/icon_hornet.png" alt="Murder_Hornet" /></div>
+        <div class="button" data-avatar="zoom"><img class="iconTransport" src="./images/icon_zoom.png" alt="Zoom" /></div>
+        <div class="button" data-avatar="toilet-paper"><img class="iconTransport" src="./images/icon_tp.png" alt="toilet_paper" /></div>
+        <div class="button" data-avatar="tiger-king"><img class="iconTransport" src="./images/icon_tiger_king.png" alt="tiger_king" /></div>
+      </div>
+
+
+      <!-- ACTION BUTTONS -->
+      <div id="action-buttons" class="buttons-wrapper">
+        <div class="button" data-goodbye-action="rocket-ship"><img class="iconTransport" src="./images/button_rocket.png" alt="rocket ship" /></div>
+        <div class="button" data-goodbye-action="sling-shot"><img class="iconTransport" src="./images/button_slingshot.png" alt="sling shot" /></div>
+        <div class="button" data-goodbye-action="yeti"><img class="iconTransport" src="./images/button_yeti.png" alt="yeti" /></div>
+        <div class="button" data-goodbye-action="karate-chop"><img class="iconTransport" src="./images/button_karatechop.png" alt="karate chop" /></div>
       </div>
     </div>
-<div id="slideSwitch"  style="width:100%;position: fixed;margin-bottom: 0px;bottom: 0;">
-<img id="tableHeightImage"   style="width:100%;" class="tableVariations" src="./images/desk_items.png"></img>
-<img class="tableVariations"  src="./images/desk_tp.png" style="display:none;width:100%;"></img>
-</div>
-
-
-    <video id="background-video" displaysinline autoplay muted></video>
-
-    <!-- snow -->
-
-      <lottie-player id="letItSnow" style="display:none;height:100%;width:100%;" id="snow" src="https://assets8.lottiefiles.com/packages/lf20_pkdfmyto.json" background="transparent" speed="1" style="width: 100%; height: 100%;" autoplay loop></lottie-player>
 
 
 
-    <!-- coffee-cup -->
-    <!-- <div id="coffee-cup">
-      <lottie-player class="lottie-player" src="./scene_animations/snow_fall.json" background="transparent" speed="1" style="width: 100%; height: 100%;" loop autoplay></lottie-player>
-    </div> -->
-
-    <!-- ball -->
-    <div class="background-lottie-animation" style="width: 100%; height: 100%;">
-      <lottie-player class="lottie-player" id="tiger" src="https://assets3.lottiefiles.com/packages/lf20_u0nyknnj.json" background="transparent" speed="1" style="width: 100%; height: 100%;"></lottie-player>
+    <!-- DESK IMAGES -->
+    <div id="slideSwitch" class="table-images">
+      <img id="tableHeightImage" class="tableVariations default-desk-image" src="./images/desk.png"></img>
+      <img id="toilet-paper" class="tableVariations" src="./images/desk_toilet-paper.png" />
+      <img id="tiger-king" class="tableVariations" src="./images/desk_tiger-king.png" style="display:none;width:100%;"></img>
+      <img id="zoom" class="tableVariations" src="./images/desk_zoom.png" style="display:none;width:100%;" />
+      <img id="murder-hornet" class="tableVariations"  src="./images/desk_murder-hornet.png" />
     </div>
 
-    <!-- graph -->
-    <div class="background-lottie-animation">
-      <lottie-player class="lottie-player" id="karate-chop" src="https://assets6.lottiefiles.com/packages/lf20_gmnaoa1j.json" background="transparent" speed="1" style="width: 100%; height: 100%;"></lottie-player>
+
+
+
+
+    <!-- END SCREEN -->
+    <div id="end-screen-content">
+      <h2>End Screen Title 2020</h2>
+
+      <div id="end-screen-buttons" class="buttons-wrapper">
+        <div id="restart-button" class="button"><img src="./images/button_redo.png" alt="go back" /></div>
+        <div id="share-button" class="button"><img src="./images/button_share.png" alt="share" /></div>
+      </div>
     </div>
 
-    <!-- logo -->
-    <div class="background-lottie-animation">
-      <lottie-player class="lottie-player" id="rocket-ship" src="https://assets9.lottiefiles.com/packages/lf20_oz7efnyx.json" background="transparent" speed="1" style="width: 100%; height: 100%;"></lottie-player>
+
+
+    <div id="share-buttons">
+      <div id="close-share-buttons">+</div>
+      
+      <div id="share-buttons-inner-wrapper">
+        <a href="mailto:?subject=Say%20goodbye%20to%202020.&body=Have%20fun%20saying%20goodbye%20to%202020.">
+          <svg class="email-share-button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M503.691 189.836L327.687 37.851C312.281 24.546 288 35.347 288 56.015v80.053C127.371 137.907 0 170.1 0 322.326c0 61.441 39.581 122.309 83.333 154.132 13.653 9.931 33.111-2.533 28.077-18.631C66.066 312.814 132.917 274.316 288 272.085V360c0 20.7 24.3 31.453 39.687 18.164l176.004-152c11.071-9.562 11.086-26.753 0-36.328z"/></svg>
+        </a>
+        
+        
+        <svg class="linkedin-share-button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M100.3 480H7.4V180.9h92.9V480zM53.8 140.1C24.1 140.1 0 115.5 0 85.8 0 56.1 24.1 32 53.8 32c29.7 0 53.8 24.1 53.8 53.8 0 29.7-24.1 54.3-53.8 54.3zM448 480h-92.7V334.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V480h-92.8V180.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V480z"/></svg>
+        
+        
+        <svg class="twitter-share-button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+      </div>
     </div>
 
-    <!-- coin -->
-    <div class="background-lottie-animation">
-      <lottie-player class="lottie-player" id="fireworks" src="https://assets5.lottiefiles.com/packages/lf20_q3sg17ly.json" background="transparent" speed="1" style="width: 100%; height: 100%;"></lottie-player>
-    </div>
 
+    
   </div><!-- end #scene -->
 
 
 
 
-  <script
-  src="https://code.jquery.com/jquery-3.5.1.min.js"
-  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
-  crossorigin="anonymous"></script>
+<script
+src="https://code.jquery.com/jquery-3.5.1.min.js"
+integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+crossorigin="anonymous"></script>
 
 
-  <script>
+<script>
 
-  var size = [window.innerWidth,window.innerHeight];  //public variable
+  // var size = [window.innerWidth,window.innerHeight];  //public variable
 
-  $(window).resize(function(){
+  // $(window).resize(function(){
 
-     window.resizeTo(100,100);
-  });
+  //    window.resizeTo(100,100);
+  // });
 
-  $('#slideSwitch').css({
-     position: 'fixed',
-     bottom:'-6px',
-  });
+  // $('#slideSwitch').css({
+  //    position: 'fixed',
+  //    bottom:'0',
+  // });
 
 
 
   $(document).ready(function() {
 
-
-
-
-  setTimeout(function(){$("#letItSnow").fadeIn(200)},200);
-
-
-  $('.goodbye-button').hover(function() {
-
-
-
-
-
-    $('.tableVariations').eq(1).css({
-       display: 'block',
-   });
-
-
-
-    $('.tableVariations').eq(0).css({
-       display: 'none',
-   });
-
-
-
-  })
-
-    $('.goodbye-button').on('click', function() {
-
-
-
-
-        let tableHeight = $("#slideSwitch").height();
-        let windowHeight = $(window).height();
-
-
-
-        setTimeout(function(){$("#slideSwitch").animate({top: windowHeight+'px'},function(){
-          $('.tableVariations').eq(0).css({
-             display: 'none',
-         });
-         $('.tableVariations').eq(1).css({
-            display: 'block',
-        });
-
-        }); }, 1000);
-
-        setTimeout(function(){$("#slideSwitch").animate({top: windowHeight-tableHeight+'px'}, function()
-        {$('#slideSwitch').css({
-           position: 'fixed',
-           top:'initial',
-           bottom:'0px',
-       });
-      ; })}, 2000);
-
-
-      $('#center-content').fadeOut();
-      var action = $(this).attr('data-goodbye-action');
-      var player = $('#' + action);
-      player.show();
-      player[0].play();
-
-      player[0].addEventListener('complete', function() {
-        this.stop();
-        player.fadeOut();
-        $('#center-content').fadeIn();
+    // SELECT AVATAR
+    $('#avatar-buttons .button').on('click', function() {
+      $('#avatar-buttons').hide();
+      $('#action-buttons').css({
+        'display' : 'grid',
       });
-      // $('#background-video').html(`<source type="video/mp4" src="https://storage.googleapis.com/mightyandtrue-website/${action}.mp4" />`);
-      // $('#background-video')[0].load();
-      // $('#background-video')[0].onended = function() {
-      //   $('#background-video').html('');
-      //   $('#background-video')[0].load();
-      //   $('#center-content').fadeIn();
-      // };
+      var avatar = $(this).attr('data-avatar');
+      $('.table-images img').hide();
+      $('#' + avatar).show();
     });
 
 
-  });
+    $('#avatar-buttons .button')
+      .on('mouseenter', function() {
+        var avatar = $(this).attr('data-avatar');
+        $('.table-images img').hide();
+        $('#' + avatar).show();
+      });
+
+
+
+
+    // $('.goodbye-button').hover(function() {
+    //   $('.tableVariations').eq(1).css({
+    //     display: 'block',
+    //   });
+
+    //   $('.tableVariations').eq(0).css({
+    //     display: 'none',
+    //   });
+    // });
+
+
+
+
+    // SELECT ACTION
+    $('#action-buttons .button').on('click', function() {
+      
+      $('#center-content').fadeOut();
+
+      var action = $(this).attr('data-goodbye-action');
+      console.log('action:', action);
+      var actionVideo = $('#' + action);
+
+      $('#snow').hide();
+      actionVideo.show();
+      actionVideo[0].play();
+
+      actionVideo[0].onended = function() {
+        actionVideo.hide();
+        $('#snow').show();
+        $('#end-screen-content').fadeIn();
+      };
+
+      $('.table-images').css({
+        'bottom' : '-50vh',
+      });
+
+
+
+      // let tableHeight = $("#slideSwitch").height();
+      // let windowHeight = $(window).height();
+
+      // setTimeout(function(){$("#slideSwitch").animate({top: windowHeight+'px'},function(){
+      //   $('.tableVariations').eq(0).css({
+      //       display: 'none',
+      //   });
+      //   $('.tableVariations').eq(1).css({
+      //     display: 'block',
+      // });
+
+      // }); }, 1000);
+
+
+      // setTimeout(function(){$("#slideSwitch").animate({top: windowHeight-tableHeight+'px'}, function()
+      // {$('#slideSwitch').css({
+      //     position: 'fixed',
+      //     top:'initial',
+      //     bottom:'0px',
+      // });
+      // ; })}, 2000);
+
+    });
+
+
+    // RESTART BUTTON
+    $('#restart-button').on('click', function() {
+      $('#end-screen-content').hide();
+      $('#center-content').fadeIn();
+      $('.table-images').css({
+        'bottom' : '0'
+      });
+    });
+
+
+    // SHARE BUTTON
+    $('#share-button').on('click', function() {
+      $('#share-buttons').show();
+    });
+    $('#close-share-buttons').on('click', function() {
+      $('#share-buttons').hide();
+    });
+
+
+    var link = 'https://www.mightyandtrue.com';
+    var title = 'Close the Book on 2020!';
+    var subject = encodeURIComponent('Say goodbye to 2020.');
+    var text = 'Have fun saying goodbye to 2020.';
+    var body = encodeURIComponent('Have fun saying goodbye to 2020.');
+
+    var twitterBtn = document.querySelector('.twitter-share-button');
+    var linkedInBtn = document.querySelector('.linkedin-share-button');
+    var text = encodeURIComponent(title);
+    var twitterShareUrl = 'https://twitter.com/intent/tweet?url=' + encodeURIComponent(link) + '&text=' + text;
+    twitterBtn.href = twitterShareUrl;
+    var linkedInShareUrl = 'https://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(link);
+    twitterBtn.href = twitterShareUrl;
+    var width = window.outerWidth > 500 ? 500 : (window.outerWidth * .9);
+    var height = window.outerHeight > 500 ? 500 : (window.outerHeight * .9);
+
+    twitterBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+       var win = window.open(twitterShareUrl, 'Share On Twitter', 'width=' + width + ',height=' + height);
+    });
+      
+    linkedInBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+       var win = window.open(linkedInShareUrl, 'Share On LinkedIn', 'width=' + width + ',height=' + height);
+    });
+
+
+
+  }); // end $(document).ready(function()
   </script>
 
 </body>
