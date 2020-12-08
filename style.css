@@ -221,7 +221,7 @@ img {
   position: fixed;
   left: 50%;
   top: 50%;
-  min-height: 100vh;
+  height: 100vh;
   transform: translate(-50%, -50%);
   z-index: 100;
 }
@@ -307,11 +307,11 @@ img {
 /* =========================== */
 /* ====== MEDIA QUERIES ====== */
 /* =========================== */
-@media (orientation: landscape) {
-  /* .background-video {
+@media (min-aspect-ratio: 16/9) {
+  .background-video {
     height: auto;
     width: 100vw;
-  } */
+  }
 }
 
 
