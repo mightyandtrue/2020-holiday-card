@@ -22,7 +22,7 @@
 
     <!-- ROCKET SHIP VIDEO -->
     <video class="background-video" id="rocket-ship" displaysinline autoplay muted>
-      <source src="https://storage.googleapis.com/mightyandtrue-website/01_rocket_launch_4mb.mp4" type="video/mp4"></source>
+      <source src="https://storage.googleapis.com/mightyandtrue-website/01_rocket_launch_v2.mp4" type="video/mp4"></source>
     </video>
 
     <!-- KARATE CHOP VIDEO -->
@@ -37,7 +37,7 @@
 
     <!-- SLING SHOT VIDEO -->
     <video class="background-video" id="sling-shot" displaysinline autoplay muted>
-      <source src="https://storage.googleapis.com/mightyandtrue-website/02_slingshot_4mb.mp4" type="video/mp4"></source>
+      <source src="https://storage.googleapis.com/mightyandtrue-website/02_slingshot_v2.mp4" type="video/mp4"></source>
     </video>
 
     
@@ -71,10 +71,10 @@
 
     <!-- DESK IMAGES -->
     <div id="slideSwitch" class="table-images">
-      <img id="tableHeightImage" class="tableVariations default-desk-image" src="./images/desk.png"></img>
+      <img id="tableHeightImage" class="tableVariations default-desk-image" src="./images/desk.png" />
       <img id="toilet-paper" class="tableVariations" src="./images/desk_toilet-paper.png" />
-      <img id="tiger-king" class="tableVariations" src="./images/desk_tiger-king.png" style="display:none;width:100%;"></img>
-      <img id="zoom" class="tableVariations" src="./images/desk_zoom.png" style="display:none;width:100%;" />
+      <img id="tiger-king" class="tableVariations" src="./images/desk_tiger-king.png" />
+      <img id="zoom" class="tableVariations" src="./images/desk_zoom.png" />
       <img id="murder-hornet" class="tableVariations"  src="./images/desk_murder-hornet.png" />
     </div>
 
@@ -148,16 +148,24 @@ crossorigin="anonymous"></script>
         'display' : 'grid',
       });
       var avatar = $(this).attr('data-avatar');
-      $('.table-images img').hide();
-      $('#' + avatar).show();
+      $('.table-images img').css({
+        'z-index' : '10'
+      });
+      $('#' + avatar).css({
+        'z-index' : '1000'
+      });
     });
 
 
     $('#avatar-buttons .button')
       .on('mouseenter', function() {
         var avatar = $(this).attr('data-avatar');
-        $('.table-images img').hide();
-        $('#' + avatar).show();
+        $('.table-images img').css({
+          'z-index' : '10'
+        });
+        $('#' + avatar).css({
+          'z-index' : '1000'
+        });
       });
 
 
@@ -174,9 +182,9 @@ crossorigin="anonymous"></script>
     // });
 
 
-    $('.tableVariations').eq(0).css({
-        'z-index': '-1',
-    });
+    // $('.tableVariations').eq(0).css({
+    //     'z-index': '-1',
+    // });
 
 
     // SELECT ACTION
@@ -188,13 +196,12 @@ crossorigin="anonymous"></script>
       console.log('action:', action);
       var actionVideo = $('#' + action);
 
-      $('#snow').hide();
       actionVideo.show();
+      actionVideo[0].load();
       actionVideo[0].play();
 
       actionVideo[0].onended = function() {
         actionVideo.hide();
-        $('#snow').show();
         $('#end-screen-content').fadeIn();
       };
 

@@ -10,7 +10,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  background-image: url('./images/bg2.png');
+  /* background-image: url('./images/bg2.png'); */
   background-size: cover;
   background-position: center bottom;
 }
@@ -198,13 +198,16 @@ img {
 }
 
 .table-images img {
+  position: absolute;
+  bottom: 0;
   width: 100%;
-  display: none;
+  z-index: 10;
   vertical-align: bottom;
 }
 
 .table-images img:first-of-type {
   display: block;
+  z-index: 100;
 }
 
 .button {
@@ -218,15 +221,14 @@ img {
   position: fixed;
   left: 50%;
   top: 50%;
-  height: 100vh;
   min-height: 100vh;
-  min-width: 100vw;
   transform: translate(-50%, -50%);
   z-index: 100;
 }
 
 #snow {
   display: block;
+  z-index: 10;
 }
 
 .background-lottie-animation {
