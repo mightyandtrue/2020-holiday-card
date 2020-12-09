@@ -7,6 +7,14 @@
 }
 
 
+
+@font-face {
+  font-family: "FilsonBlack";
+  src: url('FilsonPro-Regular.woff')
+}
+
+
+
 @font-face {
   font-family: "FilsonProHeavy";
   src: url('FilsonPro-Heavy.eot') format('embedded-opentype'), /* IE6-IE8 */
@@ -244,7 +252,7 @@ img {
   color:white;
   white-space: wrap;
   font-size:75%;
-  font-family: FilsonProRegular;
+  font-family: FilsonBlack;
   text-transform: uppercase;
   transition-duration: .4s;
 
