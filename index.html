@@ -41,25 +41,39 @@
     </video>
 
     <div id="center-content">
-      <img src="./images/header.png" />
-      <br />
-      <br />
+      <!-- Header Scenes -->
+      <div id="header-scene-1">
+        <img src="./images/close_the_book.png" />
+        <img style="display:none" src="./images/how_do_you.png" />
+        <br />
+        <p >Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet<p>
+
+      </div>
+      <div id="header-scene-2" style="display:none">
+        <img  src="./images/how_do_you.png" />
+        <br />
+
+        <p >Choose how you want to send 2020 on its not-so-merry way.<p>
+
+      </div>
+
+
 
       <!-- AVATAR BUTTONS -->
       <div id="avatar-buttons" class="buttons-wrapper">
-        <div class="button" data-avatar="murder-hornet"><img class="iconTransport" src="./images/icon_hornet.png" alt="Murder_Hornet" /><p>Murder Hornet</p></div>
-        <div class="button" data-avatar="zoom"><img class="iconTransport" src="./images/icon_zoom.png" alt="Zoom" /><p>Zoom</p></div>
-        <div class="button" data-avatar="toilet-paper"><img class="iconTransport" src="./images/icon_tp.png" alt="toilet_paper" /><p>Toilet Paper</p></div>
-        <div class="button" data-avatar="tiger-king"><img class="iconTransport" src="./images/icon_tiger_king.png" alt="tiger_king" /><p>Tiger King</p></div>
+        <div class="button" data-avatar="murder-hornet"><img class="iconTransport" src="./images/icon_hornet.png" alt="Murder_Hornet" /><p>Sting-Y McDeathbug</p></div>
+        <div class="button" data-avatar="zoom"><img class="iconTransport" src="./images/icon_zoom.png" alt="Zoom" /><p>Am I On Mute?</p></div>
+        <div class="button" data-avatar="toilet-paper"><img class="iconTransport" src="./images/icon_tp.png" alt="toilet_paper" /><p>Gold 2.0</p></div>
+        <div class="button" data-avatar="tiger-king"><img class="iconTransport" src="./images/icon_tiger_king.png" alt="tiger_king" /><p>The New Royalty</p></div>
       </div>
 
 
       <!-- ACTION BUTTONS -->
       <div id="action-buttons" class="buttons-wrapper">
-        <div class="button" data-goodbye-action="rocket-ship"><img class="iconTransport" src="./images/button_rocket.png" alt="rocket ship" /><p>Rocket Ship</p></div>
-        <div class="button" data-goodbye-action="sling-shot"><img class="iconTransport" src="./images/button_slingshot.png" alt="sling shot" /><p>Sling Shot</p></div>
-        <div class="button" data-goodbye-action="yeti"><img class="iconTransport" src="./images/button_yeti.png" alt="yeti" /><p>Yeti</p></div>
-        <div class="button" data-goodbye-action="karate-chop"><img class="iconTransport" src="./images/button_karatechop.png" alt="karate chop" /><p>Karate Chop</p></div>
+        <div class="button" data-goodbye-action="rocket-ship"><img class="iconTransport" src="./images/button_rocket.png" alt="rocket ship" /><p>Launch It Into Space</p></div>
+        <div class="button" data-goodbye-action="sling-shot"><img class="iconTransport" src="./images/button_slingshot.png" alt="sling shot" /><p>OL' PeaceMaker</p></div>
+        <div class="button" data-goodbye-action="yeti"><img class="iconTransport" src="./images/button_yeti.png" alt="yeti" /><p>Helpful 'Squatch</p></div>
+        <div class="button" data-goodbye-action="karate-chop"><img class="iconTransport" src="./images/button_karatechop.png" alt="karate chop" /><p>Give It The Chop</p></div>
       </div>
     </div>
 
@@ -74,11 +88,10 @@
 
     <!-- END SCREEN -->
     <div id="end-screen-content">
-      <h2>End Screen Title 2020</h2>
 
       <div id="end-screen-buttons" class="buttons-wrapper">
-        <div id="restart-button" class="button"><img src="./images/button_redo.png" alt="go back" /></div>
-        <div id="share-button" class="button"><img src="./images/button_share.png" alt="share" /></div>
+        <div id="restart-button" class="button"><img src="./images/button_redo.png" alt="go back" /><p>Toilet Paper</p></div>
+        <div id="share-button" class="button"><img src="./images/button_share.png" alt="share" /><p>Toilet Paper</p></div>
       </div>
     </div>
 
@@ -134,6 +147,12 @@ crossorigin="anonymous"></script>
     // SELECT AVATAR
     $('#avatar-buttons .button').on('click', function() {
       $('#avatar-buttons').hide();
+
+      $('#header-scene-1').hide();
+      $('#header-scene-2').show();
+
+
+
       $('#action-buttons').css({
         'display' : 'grid',
       });
@@ -181,6 +200,7 @@ crossorigin="anonymous"></script>
     $('#action-buttons .button').on('click', function() {
 
       $('#center-content').fadeOut();
+
 
       var action = $(this).attr('data-goodbye-action');
       console.log('action:', action);
