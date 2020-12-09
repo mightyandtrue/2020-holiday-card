@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="style.css">
 
 <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
 </head>
 
 <body>
@@ -96,6 +97,9 @@
     <div id="share-buttons">
       <div id="close-share-buttons">+</div>
 
+      <input type="text" id="copy-link" value="https://www.closethebookon2020.com" />
+      <button id="copy-link-button" data-clipboard-target="#copy-link">copy link</button>
+
       <div id="share-buttons-inner-wrapper">
         <a href="mailto:?subject=Say%20goodbye%20to%202020.&body=Have%20fun%20saying%20goodbye%20to%202020.">
           <svg class="email-share-button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M503.691 189.836L327.687 37.851C312.281 24.546 288 35.347 288 56.015v80.053C127.371 137.907 0 170.1 0 322.326c0 61.441 39.581 122.309 83.333 154.132 13.653 9.931 33.111-2.533 28.077-18.631C66.066 312.814 132.917 274.316 288 272.085V360c0 20.7 24.3 31.453 39.687 18.164l176.004-152c11.071-9.562 11.086-26.753 0-36.328z"/></svg>
@@ -124,21 +128,10 @@ crossorigin="anonymous"></script>
 
 <script>
 
-  // var size = [window.innerWidth,window.innerHeight];  //public variable
-
-  // $(window).resize(function(){
-
-  //    window.resizeTo(100,100);
-  // });
-
-  // $('#slideSwitch').css({
-  //    position: 'fixed',
-  //    bottom:'0',
-  // });
-
-
-
   $(document).ready(function() {
+
+    new ClipboardJS('#copy-link-button');
+    
 
     // SELECT AVATAR
     $('#avatar-buttons .button').on('click', function() {
