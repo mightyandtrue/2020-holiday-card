@@ -420,6 +420,7 @@ button {
   border-radius: 6px;
   width: 90vw;
   max-width: 400px;
+  text-align: center;
 }
 
 #share-buttons-inner-wrapper {
