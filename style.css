@@ -431,5 +431,13 @@ img {
     height: auto;
     width: 100vw;
   }
+} /* end @media (min-aspect-ratio: 16/9) */
 
-}
+
+@media (min-width: 1024px) {
+  .table-images {
+    width: 150vw;
+    left: 50%;
+    transform: translate(-50%);
+  }
+} /* end @media (min-width: 1024px) */
