@@ -208,7 +208,7 @@ img {
   position: fixed;
   margin-bottom: 0px;
   bottom: 0;
-  transition: 1s all ease;
+  transition: 1s bottom ease;
   width: 200vw;
   max-width: 200vw;
   left: 50%;
