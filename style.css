@@ -493,6 +493,10 @@ button {
     max-width: 100vw;
   }
 
+  #center-content {
+    top: 9vh;
+  }
+
   .buttons-wrapper .button p {
     font-size: 12px !important;
     margin-top: 0px;
