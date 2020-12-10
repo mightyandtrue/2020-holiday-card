@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" href="https://assets.website-files.com/5eed52b425f297632ad91475/5f04930fd5fee73b6af73537_mighty-true-favicon.png" />
+<link rel="icon" href="./images/2020-Favicon.png" />
 <title>M&T Holiday Card</title>
 
 <link rel="stylesheet" href="style.css">
@@ -47,7 +47,7 @@
         <img src="./images/close_the_book.png" />
         <img style="display:none" src="./images/how_do_you.png" />
         <br />
-        <p >Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet<p>
+        <p>So, 2020 was....not awesome. That said, 2021 is a chance to start fresh. But first, let's give 2020 the ol' heave-ho. Seeing as time is an intangible construct, we've chosen a planner as our 2020 stand-in. What would go on the cover of your 2020 planner?<p>
 
           <!-- AVATAR BUTTONS -->
           <div id="avatar-buttons" class="buttons-wrapper">
@@ -62,7 +62,7 @@
         <img  src="./images/how_do_you.png" />
         <br />
 
-        <p>Choose how you want to send 2020 on its not-so-merry way.<p>
+        <p style="opacity:1">Choose how you want to send 2020 on its not-so-merry way.<p>
 
         <!-- ACTION BUTTONS -->
         <div id="action-buttons" class="buttons-wrapper">
@@ -87,8 +87,8 @@
     <div id="end-screen-content">
 
       <div id="end-screen-buttons" class="buttons-wrapper">
-        <div id="restart-button" class="button"><img src="./images/button_redo.png" alt="go back" /><p>Restart</p></div>
-        <div id="share-button" class="button"><img src="./images/button_share.png" alt="share" /><p>Share</p></div>
+        <div id="restart-button" class="button"><img src="./images/button_redo.png" alt="go back" /><p>Do It<br />again!</p></div>
+        <div id="share-button" class="button"><img src="./images/button_share.png" alt="share" /><p>Share With<br />A Friend</p></div>
       </div>
     </div>
 
@@ -131,7 +131,7 @@ crossorigin="anonymous"></script>
   $(document).ready(function() {
 
     new ClipboardJS('#copy-link-button');
-    
+
 
     // SELECT AVATAR
     $('#avatar-buttons .button').on('click', function() {
@@ -162,24 +162,6 @@ crossorigin="anonymous"></script>
       });
 
 
-
-
-    // $('.goodbye-button').hover(function() {
-    //   $('.tableVariations').eq(1).css({
-    //     display: 'block',
-    //   });
-
-    //   $('.tableVariations').eq(0).css({
-    //     display: 'none',
-    //   });
-    // });
-
-
-    // $('.tableVariations').eq(0).css({
-    //     'z-index': '-1',
-    // });
-
-
     // SELECT ACTION
     $('#action-buttons .button').on('click', function() {
 
@@ -202,30 +184,6 @@ crossorigin="anonymous"></script>
       $('.table-images').css({
         'bottom' : '-50vh',
       });
-
-
-
-      // let tableHeight = $("#slideSwitch").height();
-      // let windowHeight = $(window).height();
-
-      // setTimeout(function(){$("#slideSwitch").animate({top: windowHeight+'px'},function(){
-      //   $('.tableVariations').eq(0).css({
-      //       display: 'none',
-      //   });
-      //   $('.tableVariations').eq(1).css({
-      //     display: 'block',
-      // });
-
-      // }); }, 1000);
-
-
-      // setTimeout(function(){$("#slideSwitch").animate({top: windowHeight-tableHeight+'px'}, function()
-      // {$('#slideSwitch').css({
-      //     position: 'fixed',
-      //     top:'initial',
-      //     bottom:'0px',
-      // });
-      // ; })}, 2000);
 
     });
 
