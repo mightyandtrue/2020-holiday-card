@@ -191,7 +191,11 @@ crossorigin="anonymous"></script>
     // RESTART BUTTON
     $('#restart-button').on('click', function() {
       $('#end-screen-content').hide();
+      $('#header-scene-1').show();
+      $('#header-scene-2').hide();
       $('#center-content').fadeIn();
+
+
       $('.table-images').css({
         'bottom' : '0'
       });
