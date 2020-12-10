@@ -6,20 +6,22 @@
 <link rel="icon" href="./images/2020-Favicon.png" />
 
 
-<meta property="og:url"           content="https://www.closethebookon2020.com/" />
-<meta property="og:type"          content="website" />
-<meta property="og:title"         content="Close The Book On 2020" />
-<meta property="og:description"   content="Interactive Game To Say Farewell To 2020" />
+<meta property="og:url" content="https://www.closethebookon2020.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Close The Book On 2020" />
+<meta property="og:description" content="Interactive Game To Say Farewell To 2020" />
 <!-- <meta property="og:image"         content="https://www.your-domain.com/path/image.jpg" /> -->
 
 
-<title>M&T Holiday Card</title>
+<title>Close the Book on 2020</title>
 
 <link rel="stylesheet" href="style.css">
 
 <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
 </head>
+
+
 
 <body>
 
@@ -32,22 +34,22 @@
 
     <!-- ROCKET SHIP VIDEO -->
     <video class="background-video" id="rocket-ship" playsinline autoplay muted>
-      <source src="https://storage.googleapis.com/mightyandtrue-website/01_rocket_launch_mobile.mp4" type="video/mp4"></source>
+      <source src="https://storage.googleapis.com/mightyandtrue-website/rocket-ship-mobile.mp4" type="video/mp4"></source>
     </video>
 
     <!-- KARATE CHOP VIDEO -->
     <video class="background-video" id="karate-chop" playsinline autoplay muted>
-      <source src="https://storage.googleapis.com/mightyandtrue-website/04_karatechop_mobile.mp4" type="video/mp4"></source>
+      <source src="https://storage.googleapis.com/mightyandtrue-website/karate-chop-mobile.mp4" type="video/mp4"></source>
     </video>
 
     <!-- YETI VIDEO -->
     <video class="background-video" id="yeti" playsinline autoplay muted>
-      <source src="https://storage.googleapis.com/mightyandtrue-website/03_yeti_mobile.mp4" type="video/mp4"></source>
+      <source src="https://storage.googleapis.com/mightyandtrue-website/yeti-mobile.mp4" type="video/mp4"></source>
     </video>
 
     <!-- SLING SHOT VIDEO -->
-    <video class="background-video" id="sling-shot" playsinline autoplay muted>
-      <source src="https://storage.googleapis.com/mightyandtrue-website/02_slingshot_mobile.mp4" type="video/mp4"></source>
+    <video class="background-video" id="slingshot" playsinline autoplay muted>
+      <source src="https://storage.googleapis.com/mightyandtrue-website/slingshot-mobile.mp4" type="video/mp4"></source>
     </video>
 
     <div id="center-content">
@@ -56,22 +58,22 @@
         <img src="./images/close_the_book.png" />
         <img style="display:none" src="./images/how_do_you.png" />
         <br />
-        <p>So, 2020 was....not awesome. That said, 2021 is a chance to start fresh. But first, let's give 2020 the ol' heave-ho. Seeing as time is an intangible construct, we've chosen a planner as our 2020 stand-in. What would go on the cover of your 2020 planner?<p>
+        <p class="subtitle">So, 2020 was....not awesome. That said, 2021 is a chance to start fresh. But first, let's give 2020 the ol' heave-ho. Seeing as time is an intangible construct, we've chosen a planner as our 2020 stand-in. What would go on the cover of your 2020 planner?<p>
 
-          <!-- AVATAR BUTTONS -->
-          <div id="avatar-buttons" class="buttons-wrapper">
-            <div class="button" data-avatar="murder-hornet"><img class="iconTransport" src="./images/icon_hornet.png" alt="Murder_Hornet" /><p>Sting-Y <br />McDeathbug</p></div>
-            <div class="button" data-avatar="zoom"><img class="iconTransport" src="./images/icon_zoom.png" alt="Zoom" /><p>Am I On <br />Mute?</p></div>
-            <div class="button" data-avatar="toilet-paper"><img class="iconTransport" src="./images/icon_tp.png" alt="toilet_paper" /><p>Gold 2.0</p></div>
-            <div class="button" data-avatar="tiger-king"><img class="iconTransport" src="./images/icon_tiger_king.png" alt="tiger_king" /><p>The New <br />Royalty</p></div>
-          </div>
+        <!-- AVATAR BUTTONS -->
+        <div id="avatar-buttons" class="buttons-wrapper">
+          <div class="button" data-avatar="murder-hornet"><img class="iconTransport" src="./images/icon_hornet.png" alt="Murder_Hornet" /><p>Sting-Y <br />McDeathbug</p></div>
+          <div class="button" data-avatar="zoom"><img class="iconTransport" src="./images/icon_zoom.png" alt="Zoom" /><p>Am I On <br />Mute?</p></div>
+          <div class="button" data-avatar="toilet-paper"><img class="iconTransport" src="./images/icon_tp.png" alt="toilet_paper" /><p>Gold 2.0</p></div>
+          <div class="button" data-avatar="tiger-king"><img class="iconTransport" src="./images/icon_tiger_king.png" alt="tiger_king" /><p>The New <br />Royalty</p></div>
+        </div>
       </div>
+
 
       <div id="header-scene-2" style="display:none">
         <img  src="./images/how_do_you.png" />
         <br />
-
-        <p style="opacity:1">Choose how you want to send 2020 on its not-so-merry way.<p>
+        <p class="subtitle" style="opacity:1">Choose how you want to send 2020 on its not-so-merry way.<p>
 
         <!-- ACTION BUTTONS -->
         <div id="action-buttons" class="buttons-wrapper">
@@ -107,55 +109,44 @@
       <h2 style="text-align:center;font-family: FilsonBlack;margin: 0;">Share This Page</h2>
       <br/>
       <div id="close-share-buttons">+</div>
-      <img width="15" style="padding-right: 7px;" src="./images/attatchment.png">
+      
+      
+      <!-- copy link wrapper -->
+      <div id="copy-link-wrapper">
+        <img width="15" src="./images/attatchment.png">
 
-
-      <input style="font-family: FilsonBlack;padding: 5px;min-width: 211px;min-height: 32px;border-radius: 4px;border: none;background-color: #f3f7fe;" type="text" id="copy-link" value="https://www.closethebookon2020.com" />
-      <button id="copy-link-button" data-clipboard-target="#copy-link">copy link</button>
+        <input style="font-family: FilsonBlack;padding: 5px;min-width: 211px;min-height: 32px;border-radius: 4px;border: none;background-color: #f3f7fe;" type="text" id="copy-link" value="https://www.closethebookon2020.com" />
+        
+        <button id="copy-link-button" data-clipboard-target="#copy-link">copy link</button>
+      </div>
+      
+      
       <br />
       <br />
-      <hr style="margin-bottom:10px;"/><g style="position: absolute;padding: 5px 0px;background-color: white;transform: translateY(-25px);transform: translate(-20px, -26px);padding-left: 20px;padding-right: 20px;">or</g>
+
+
+      <div id="or-wrapper">
+        <div id="or">or</div>
+        <hr />
+      </div>
 
 
       <div id="share-buttons-inner-wrapper">
-        <a  href="mailto:?subject=Say%20goodbye%20to%202020.&body=Have%20fun%20saying%20goodbye%20to%202020.">
 
-          <svg class="share-style" width="72" height="72" viewBox="0 -8 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="0.5" y="0.5" width="71" height="71" rx="35.5" fill="#FDFDFD"/>
-          <g clip-path="url(#clip0)">
-          <path d="M44.0001 28H28C26.9 28 26.01 28.9 26.01 30L26 42C26 43.1 26.9 44 28 44H44.0001C45.1001 44 46.0001 43.1 46.0001 42V30C46.0001 28.9 45.1001 28 44.0001 28ZM44.0001 42H28V32L36 37L44.0001 32V42ZM36 35L28 30H44.0001L36 35Z" fill="black"/>
-          </g>
-          <rect x="0.5" y="0.5" width="71" height="71" rx="35.5" stroke="black"/>
-          <defs>
-          <clipPath id="clip0">
-          <rect width="24" height="24" fill="white" transform="translate(24 24)"/>
-          </clipPath>
-          </defs>
-          </svg>
-
+        <!-- mailto: -->
+        <a href="mailto:?subject=Say%20goodbye%20to%202020.&body=Have%20fun%20saying%20goodbye%20to%202020.">
+          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 72 72" style="enable-background:new 0 0 72 72;" xml:space="preserve"> <style type="text/css"> .st0{fill:#FDFDFD;} .st1{clip-path:url(#SVGID_2_);} .st2{fill:none;stroke:#000000;} </style> <path class="st0" d="M36,0.5L36,0.5c19.6,0,35.5,15.9,35.5,35.5l0,0c0,19.6-15.9,35.5-35.5,35.5l0,0C16.4,71.5,0.5,55.6,0.5,36l0,0 C0.5,16.4,16.4,0.5,36,0.5z"/> <g> <defs> <rect id="SVGID_1_" x="24" y="24" width="24" height="24"/> </defs> <clipPath id="SVGID_2_"> <use xlink:href="#SVGID_1_"  style="overflow:visible;"/> </clipPath> <g class="st1"> <path d="M44,28H28c-1.1,0-2,0.9-2,2l0,12c0,1.1,0.9,2,2,2h16c1.1,0,2-0.9,2-2V30C46,28.9,45.1,28,44,28z M44,42H28V32l8,5l8-5V42z M36,35l-8-5h16L36,35z"/> </g> </g> <path class="st2" d="M36,0.5L36,0.5c19.6,0,35.5,15.9,35.5,35.5l0,0c0,19.6-15.9,35.5-35.5,35.5l0,0C16.4,71.5,0.5,55.6,0.5,36l0,0 C0.5,16.4,16.4,0.5,36,0.5z"/> </svg>
         </a>
 
+        <!-- linkedin -->
+        <svg id="linkedin-share-button" width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg"> <rect x="0.5" y="0.5" width="71" height="71" rx="35.5" fill="#FDFDFD"/> <path d="M30.2006 45H25.8469V30.9797H30.2006V45ZM28.0214 29.0672C26.6292 29.0672 25.5 27.9141 25.5 26.5219L25.5 26.5219C25.5 25.1294 26.6289 24.0005 28.0214 24.0005C29.4139 24.0005 30.5428 25.1294 30.5428 26.5219C30.5428 27.9141 29.4131 29.0672 28.0214 29.0672V29.0672ZM46.4953 45H42.1509V38.175C42.1509 36.5485 42.1181 34.4625 39.8873 34.4625C37.6237 34.4625 37.2769 36.2297 37.2769 38.0578V45H32.9278V30.9797H37.1034V32.8922H37.1644C37.7456 31.7906 39.1655 30.6281 41.2838 30.6281C45.69 30.6281 46.5 33.5297 46.5 37.2985V45H46.4953Z" fill="black"/> <rect x="0.5" y="0.5" width="71" height="71" rx="35.5" stroke="black"/> </svg>
+
+        <!-- facebook -->
+        <svg id="facebook-share-button" width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg"> <rect x="0.5" y="0.5" width="71" height="71" rx="35.5" fill="#FDFDFD"/> <path d="M41.5847 37.5L42.2513 33.1566H38.0836V30.338C38.0836 29.1497 38.6658 27.9914 40.5324 27.9914H42.4271V24.2934C42.4271 24.2934 40.7077 24 39.0638 24C35.6316 24 33.3882 26.0803 33.3882 29.8463V33.1566H29.573V37.5H33.3882V48H38.0836V37.5H41.5847Z" fill="black"/> <rect x="0.5" y="0.5" width="71" height="71" rx="35.5" stroke="black"/> </svg>
 
 
-        <svg class="linkedin-share-button share-style" width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="0.5" y="0.5" width="71" height="71" rx="35.5" fill="#FDFDFD"/>
-        <path d="M30.2006 45H25.8469V30.9797H30.2006V45ZM28.0214 29.0672C26.6292 29.0672 25.5 27.9141 25.5 26.5219L25.5 26.5219C25.5 25.1294 26.6289 24.0005 28.0214 24.0005C29.4139 24.0005 30.5428 25.1294 30.5428 26.5219C30.5428 27.9141 29.4131 29.0672 28.0214 29.0672V29.0672ZM46.4953 45H42.1509V38.175C42.1509 36.5485 42.1181 34.4625 39.8873 34.4625C37.6237 34.4625 37.2769 36.2297 37.2769 38.0578V45H32.9278V30.9797H37.1034V32.8922H37.1644C37.7456 31.7906 39.1655 30.6281 41.2838 30.6281C45.69 30.6281 46.5 33.5297 46.5 37.2985V45H46.4953Z" fill="black"/>
-        <rect x="0.5" y="0.5" width="71" height="71" rx="35.5" stroke="black"/>
-        </svg>
-
-
-        <svg class="share-style" width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="0.5" y="0.5" width="71" height="71" rx="35.5" fill="#FDFDFD"/>
-        <path d="M41.5847 37.5L42.2513 33.1566H38.0836V30.338C38.0836 29.1497 38.6658 27.9914 40.5324 27.9914H42.4271V24.2934C42.4271 24.2934 40.7077 24 39.0638 24C35.6316 24 33.3882 26.0803 33.3882 29.8463V33.1566H29.573V37.5H33.3882V48H38.0836V37.5H41.5847Z" fill="black"/>
-        <rect x="0.5" y="0.5" width="71" height="71" rx="35.5" stroke="black"/>
-        </svg>
-
-
-        <svg class="twitter-share-button share-style"  width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="0.5" y="0.5" width="71" height="71" rx="35.5" fill="#FDFDFD"/>
-        <path d="M45.533 31.1118C45.5482 31.3249 45.5482 31.5382 45.5482 31.7514C45.5482 38.2539 40.599 45.7463 31.5533 45.7463C28.7665 45.7463 26.1777 44.9391 24 43.5382C24.396 43.5838 24.7766 43.5991 25.1878 43.5991C27.4873 43.5991 29.604 42.8224 31.2944 41.4976C29.132 41.4519 27.3198 40.0356 26.6954 38.0864C27 38.132 27.3045 38.1625 27.6244 38.1625C28.066 38.1625 28.5076 38.1016 28.9188 37.995C26.665 37.5381 24.9746 35.5585 24.9746 33.1676V33.1067C25.6294 33.4722 26.3909 33.7006 27.1979 33.731C25.873 32.8478 25.005 31.3402 25.005 29.6346C25.005 28.7209 25.2487 27.8833 25.6751 27.1524C28.0964 30.1371 31.736 32.0863 35.8172 32.2996C35.7411 31.9341 35.6954 31.5534 35.6954 31.1727C35.6954 28.462 37.8883 26.2539 40.6141 26.2539C42.0304 26.2539 43.3095 26.8478 44.208 27.8072C45.3197 27.594 46.3857 27.1828 47.3299 26.6194C46.9643 27.7615 46.1877 28.7209 45.1674 29.33C46.1573 29.2235 47.1167 28.9493 47.9999 28.5686C47.33 29.5432 46.4924 30.4112 45.533 31.1118Z" fill="black"/>
-        <rect x="0.5" y="0.5" width="71" height="71" rx="35.5" stroke="black"/>
-        </svg>
+        <!-- twitter -->
+        <svg id="twitter-share-button" width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg"> <rect x="0.5" y="0.5" width="71" height="71" rx="35.5" fill="#FDFDFD"/> <path d="M45.533 31.1118C45.5482 31.3249 45.5482 31.5382 45.5482 31.7514C45.5482 38.2539 40.599 45.7463 31.5533 45.7463C28.7665 45.7463 26.1777 44.9391 24 43.5382C24.396 43.5838 24.7766 43.5991 25.1878 43.5991C27.4873 43.5991 29.604 42.8224 31.2944 41.4976C29.132 41.4519 27.3198 40.0356 26.6954 38.0864C27 38.132 27.3045 38.1625 27.6244 38.1625C28.066 38.1625 28.5076 38.1016 28.9188 37.995C26.665 37.5381 24.9746 35.5585 24.9746 33.1676V33.1067C25.6294 33.4722 26.3909 33.7006 27.1979 33.731C25.873 32.8478 25.005 31.3402 25.005 29.6346C25.005 28.7209 25.2487 27.8833 25.6751 27.1524C28.0964 30.1371 31.736 32.0863 35.8172 32.2996C35.7411 31.9341 35.6954 31.5534 35.6954 31.1727C35.6954 28.462 37.8883 26.2539 40.6141 26.2539C42.0304 26.2539 43.3095 26.8478 44.208 27.8072C45.3197 27.594 46.3857 27.1828 47.3299 26.6194C46.9643 27.7615 46.1877 28.7209 45.1674 29.33C46.1573 29.2235 47.1167 28.9493 47.9999 28.5686C47.33 29.5432 46.4924 30.4112 45.533 31.1118Z" fill="black"/> <rect x="0.5" y="0.5" width="71" height="71" rx="35.5" stroke="black"/> </svg>
 
 
       </div>
@@ -215,11 +206,12 @@ crossorigin="anonymous"></script>
 
       $('#center-content').fadeOut();
 
-
       var action = $(this).attr('data-goodbye-action');
-      console.log('action:', action);
-      var actionVideo = $('#' + action);
+      var screenSize = $(window).width() >= 1024 ? 'desktop' : 'mobile';
 
+      $('#' + action).html(`<source src="https://storage.googleapis.com/mightyandtrue-website/${action}-${screenSize}.mp4" type="video/mp4"></source>`);
+
+      var actionVideo = $('#' + action);
       actionVideo.show();
       actionVideo[0].load();
       actionVideo[0].play();
@@ -233,7 +225,9 @@ crossorigin="anonymous"></script>
         'bottom' : '-50vh',
       });
 
-    });
+    }); // end $('#action-buttons .button').on('click', function()
+
+
 
 
     // RESTART BUTTON
@@ -265,13 +259,18 @@ crossorigin="anonymous"></script>
     var text = 'Have fun saying goodbye to 2020.';
     var body = encodeURIComponent('Have fun saying goodbye to 2020.');
 
-    var twitterBtn = document.querySelector('.twitter-share-button');
-    var linkedInBtn = document.querySelector('.linkedin-share-button');
+    var twitterBtn = document.querySelector('#twitter-share-button');
+    var linkedInBtn = document.querySelector('#linkedin-share-button');
+    var facebookBtn = document.querySelector('#facebook-share-button');
+
     var text = encodeURIComponent(title);
+
     var twitterShareUrl = 'https://twitter.com/intent/tweet?url=' + encodeURIComponent(link) + '&text=' + text;
-    twitterBtn.href = twitterShareUrl;
+
     var linkedInShareUrl = 'https://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(link);
-    twitterBtn.href = twitterShareUrl;
+
+    var facebookShareUrl = 'https://www.facebook.com/sharer/sharer.php?u=#' + encodeURIComponent(link);
+
     var width = window.outerWidth > 500 ? 500 : (window.outerWidth * .9);
     var height = window.outerHeight > 500 ? 500 : (window.outerHeight * .9);
 
@@ -285,7 +284,10 @@ crossorigin="anonymous"></script>
        var win = window.open(linkedInShareUrl, 'Share On LinkedIn', 'width=' + width + ',height=' + height);
     });
 
-
+    facebookBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+       var win = window.open(facebookShareUrl, 'Share On Facebook', 'width=' + width + ',height=' + height);
+    });
 
   }); // end $(document).ready(function()
   </script>
