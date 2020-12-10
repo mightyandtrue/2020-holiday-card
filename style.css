@@ -205,11 +205,14 @@ img {
 
 .table-images {
   z-index: 1000;
-  width:100%;
   position: fixed;
   margin-bottom: 0px;
   bottom: 0;
   transition: 1s all ease;
+  width: 150vw;
+  max-width: 150vw;
+  left: 50%;
+  transform: translate(-50%);
 }
 
 .table-images img {
@@ -436,8 +439,7 @@ img {
 
 @media (min-width: 1024px) {
   .table-images {
-    width: 150vw;
-    left: 50%;
-    transform: translate(-50%);
+    width: 100vw;
+    max-width: 100vw;
   }
 } /* end @media (min-width: 1024px) */
