@@ -10,7 +10,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Close The Book On 2020" />
 <meta property="og:description" content="Want to give 2020 the send-off it deserves?" />
-<!-- <meta property="og:image"         content="https://www.your-domain.com/path/image.jpg" /> -->
+<meta property="og:image" content="./images/close-the-book-and-2020.jpg" />
 
 
 <title>Close the Book on 2020</title>
@@ -80,7 +80,7 @@
           <div class="button" data-goodbye-action="rocket-ship"><img class="iconTransport" src="./images/button_rocket.png" alt="rocket ship" /><p>Launch It <br />Into Space</p></div>
           <div class="button" data-goodbye-action="slingshot"><img class="iconTransport" src="./images/button_slingshot.png" alt="sling shot" /><p>OL' <br />PeaceMaker</p></div>
           <div class="button" data-goodbye-action="yeti"><img class="iconTransport" src="./images/icon_yeti.png" alt="yeti" /><p>Helpful <br />'Squatch</p></div>
-          <div class="button" data-goodbye-action="karate-chop"><img class="iconTransport" src="./images/icon_karate_chop.png" alt="karate chop" /><p>Give It <br />The Chop</p></div>
+          <div class="button" data-goodbye-action="karate-chop"><img class="iconTransport" src="./images/button_karatechop_2.png" alt="karate chop" /><p>Give It <br />The Chop</p></div>
         </div>
       </div>
     </div>
@@ -170,6 +170,12 @@ crossorigin="anonymous"></script>
   $(document).ready(function() {
 
     new ClipboardJS('#copy-link-button');
+
+    $('#copy-link-button').on('click', function() {
+      $(this).html('copied');
+    });
+
+
 
 
     // SELECT AVATAR

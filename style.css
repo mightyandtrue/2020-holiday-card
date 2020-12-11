@@ -244,7 +244,6 @@ img {
   font-size:75%;
   font-family: FilsonBlack;
   text-transform: uppercase;
-  transition-duration: .4s;
 }
 
 button {
@@ -295,8 +294,8 @@ button {
   position: absolute;
   left: 50%;
   transform: translate(-50%);
-  font-size: 9px !important;
-  line-height: 11px !important;
+  font-size: 10px !important;
+  line-height: 12px !important;
   font-family: "FilsonProHeavy" !important;
   width: fit-content;
   opacity: 1;
@@ -434,6 +433,7 @@ button {
 
 #share-buttons svg {
   height: 60px;
+  max-width: 100%;
   cursor: pointer;
   vertical-align: bottom;
 }
@@ -498,15 +498,19 @@ button {
   }
 
   .buttons-wrapper .button p {
-    font-size: 12px !important;
     margin-top: 0px;
     opacity: 0;
     color:white;
     white-space: wrap;
-    font-size:75%;
     font-family: FilsonBlack;
     text-transform: uppercase;
-    transition-duration: .4s;
+    font-size: 14px !important;
+    line-height: 16px !important;
+  }
+
+  .buttons-wrapper .button:hover p {
+    transform: scale(.7) translate(-50%);
+    transform-origin: left;
   }
 
   #header-scene-1 p {
