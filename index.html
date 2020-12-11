@@ -16,12 +16,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <meta property="og:url" content="https://www.closethebookon2020.com/" />
 <meta property="og:type" content="website" />
-<meta property="og:title" content="Close The Book On 2020" />
+<meta property="og:title" content="Want to give 2020 the send-off it deserves?" />
 <meta property="og:description" content="Want to give 2020 the send-off it deserves?" />
 <meta property="og:image" content="./images/close-the-book-on-2020.jpg" />
 
 
 <title>Close the Book on 2020</title>
+<meta name="description" content="Want to give 2020 the send-off it deserves?" />
 
 <link rel="stylesheet" href="style.css">
 
@@ -72,7 +73,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <img src="./images/close_the_book.png" />
         <img style="display:none" src="./images/how_do_you.png" />
         <br />
-        <p class="subtitle">So, 2020 was....not awesome. That said, 2021 is a chance to start fresh. But first, let's give 2020 the ol' heave-ho. Seeing as time is an intangible construct, we've chosen a planner as our 2020 stand-in. What would go on the cover of your 2020 planner?<p>
+        <p class="subtitle" style="margin-bottom: 10px;">
+          So, 2020 was....not awesome. That said, 2021 is a chance to start fresh. But first, let's give 2020 the ol' heave-ho. Seeing as time is an intangible construct, we've chosen a planner as our 2020 stand-in.
+        </p>
+
+        <p style="font-family: 'FilsonProHeavy'; margin-top: 0;" class="subtitle">
+          What would go on the cover of your <span style="white-space: nowrap;">2020 planner?</span>
+        </p>
 
         <!-- AVATAR BUTTONS -->
         <div id="avatar-buttons" class="buttons-wrapper">
@@ -114,6 +121,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div id="end-screen-buttons" class="buttons-wrapper">
         <div id="restart-button" class="button"><img src="./images/button_redo.png" alt="go back" /><p>Do It<br />again!</p></div>
         <div id="share-button" class="button"><img src="./images/button_share.png" alt="share" /><p>Share With<br />A Friend</p></div>
+      </div>
+
+      <div id="merrily">
+        <a href="https://www.mightyandtrue.com" target="_blank">Merrily made in Austin, TX</a>
       </div>
     </div>
 
@@ -300,20 +311,18 @@ crossorigin="anonymous"></script>
 
 
     var link = 'https://www.closethebookon2020.com/';
-    var title = encodeURIComponent(title);
     var subject = encodeURIComponent('Want to give 2020 the send-off it deserves?');
-    var text = 'Have fun saying goodbye to 2020.';
+    var text = encodeURIComponent('Want to give 2020 the send-off it deserves?');
     var body = encodeURIComponent('Choose how you want to send 2020 on its not-so-merry way: ' + link);
 
     var twitterBtn = document.querySelector('#twitter-share-button');
     var linkedInBtn = document.querySelector('#linkedin-share-button');
     var facebookBtn = document.querySelector('#facebook-share-button');
 
-    var text = encodeURIComponent(title);
+    var twitterShareUrl = 'https://twitter.com/intent/tweet?text=' + text + '&url=' + encodeURIComponent(link) + '&hashtags=goodbye2020&via@mightyandtrue';
 
-    var twitterShareUrl = 'https://twitter.com/intent/tweet?url=' + encodeURIComponent(link) + '&text=' + text;
-
-    var linkedInShareUrl = 'https://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(link) + '&title=' + title + '&summary=' + body;
+    var linkedInShareUrl = 'https://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(link) + '&title=' + text + '&summary=' + body;
+    console.log(linkedInShareUrl);
 
     var facebookShareUrl = 'https://www.facebook.com/sharer/sharer.php?u=#' + encodeURIComponent(link);
 
