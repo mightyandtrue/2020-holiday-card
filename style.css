@@ -459,11 +459,28 @@ button {
   max-height: 80px;
 }
 
-#share-buttons svg {
+#share-buttons-inner-wrapper svg {
   height: 60px;
   max-width: 100%;
   cursor: pointer;
   vertical-align: bottom;
+}
+
+#share-buttons-inner-wrapper svg path {
+  transition: .1s all linear;
+}
+
+#share-buttons-inner-wrapper svg path.share-button-circle {
+  fill: #fff;
+  stroke: #000;
+}
+
+#share-buttons-inner-wrapper svg:hover path.share-button-circle {
+  fill: #000;
+}
+
+#share-buttons-inner-wrapper svg:hover path.share-button-icon {
+  fill: #fff;
 }
 
 #close-share-buttons {
